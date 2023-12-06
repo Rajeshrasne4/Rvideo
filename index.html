@@ -178,7 +178,7 @@
 <body>
     <div class="popup" id="popup">
         <span class="popuptext" id="Note">
-            <Button class="close" id="close" onclick="closepopup()">Close/बंद करा</Button><br>
+        
             <h2 class="Note" id="Note1" class="typing-animation" style="text-align: center; font-size: 17px;"> <strong>वेलकम टु Rajesh R. विडीओ गँलरी</strong></h2>
             <h6 class="Note" id="Note2" class="typing-animation">(1) विडीओ बघण्यासाठी विडीओवर क्लिक करा. प्लेअर ओपन होईल</h6><hr>
             <h6 class="Note" id="Note3" class="typing-animation">(2) विडीओ डाऊनलोड करण्यासाठी डाऊनलोड वर क्लिक करा .</h6><hr>
@@ -190,6 +190,10 @@
     </header>
 
     <div class="gallery">
+        <a href="#" class="video" onclick="openModal('https://drive.google.com/file/d/1X7OwfbxWmRmhOLVSDm2MvcxFa0rimP_R/preview', 'https://drive.google.com/uc?id=1X7OwfbxWmRmhOLVSDm2MvcxFa0rimP_R')">
+            <img src="https://drive.google.com/uc?id=1LAHCrdga14AvbVkejoHFlHgEjnvJQMzd" alt="Video 1" width="300" height="100%">
+            <h3 style="text-align: center;">Sam-Bahadur.2023</h3>
+
 <a href="#" class="video" onclick="openModal('https://drive.google.com/file/d/11ZPuPgkd31u706V5TgFnlv5dl3tigCca/preview', 'https://drive.google.com/uc?id=11ZPuPgkd31u706V5TgFnlv5dl3tigCca')">
             <img src="https://drive.google.com/uc?id=13EGWKdiDLDthQyqFaRDBiuHjbCD80lCg" alt="Video 1" width="300" height="100%">
             <h3 style="text-align: center;">Bhagavanth.Kesari.2023</h3>
@@ -230,12 +234,17 @@
     <script>
 // ----------------------------------------------popup animation Start------------------------------------------/
 function openPopup() {
-        var popup = document.getElementById("Note");
-        popup.style.display = "block";
+    var popup = document.getElementById("Note");
+    popup.style.display = "block";
 
-        // Optionally, you can start the typing animation when the popup opens
-        startTypingAnimation();
-    }
+    // Optionally, you can start the typing animation when the popup opens
+    startTypingAnimation();
+
+    // Close the popup after 30 seconds
+    setTimeout(function () {
+        closepopup();
+    }, 9000); // 30 seconds in milliseconds
+}
 
     // Function to close the popup
     function closepopup() {
